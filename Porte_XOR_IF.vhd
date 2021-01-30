@@ -1,20 +1,24 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity Porte_XOR is
-port(X1: in std_logic_vector( );
-	X2: in std_logic_vector( );
-	X3: out std_logicu;
-    LEDR: out std_logic_vector( ));
-end Porte_XOR;  
+ENTITY Porte_XOR IS
+	PORT (
+		X1 : IN std_logic_vector();
+		X2 : IN std_logic_vector();
+		X3 : OUT std_logicu;
+		LEDR : OUT std_logic_vector()
+	);
+END Porte_XOR; 
 
-architecture XOR_Gate of Porte_XOR is
-begin
-    process(X1, X2)
-    begin
-        if (X1/=X2) then
-	    X3 <= '1'; else X3 <= '0';
-	end if;
-    end process;
+ARCHITECTURE XOR_Gate OF Porte_XOR IS
+BEGIN
+	PROCESS (X1, X2)
+	BEGIN
+		IF (X1 /= X2) THEN
+			X3 <= '1';
+		ELSE
+			X3 <= '0';
+		END IF;
+	END PROCESS;
 	LEDR(0) <= X3;
-end XOR_Gate;
+END XOR_Gate;

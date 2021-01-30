@@ -1,16 +1,16 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY Porte_Ou IS
+ENTITY Porte_AND IS
 	PORT (
 		X1 : IN std_logic;
 		X2 : IN std_logic;
-		X3 : OUT std_logic;
+		X3 : OUT std_logicu;
 		LEDR : OUT std_logic(0 DOWNTO 0)
 	);
-END Porte_Ou; 
+END Porte_AND;
 
-ARCHITECTURE OR_Gate OF Porte_Ou IS
-BEGIN
-	LEDR(0) <= X1 OR X2;
-END OR_Gate;
+architecture SAND of Porte_AND is 
+begin 
+	LEDR(0) <= X1 AND X2; 
+end SAND;
